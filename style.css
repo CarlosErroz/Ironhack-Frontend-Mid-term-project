@@ -2,13 +2,16 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 0px;
     margin: 0px;
-    width: 100%;
     background-color: #F4F6FC;
     font-size: 17px;
     font-weight: 500;
     line-height: 22px;
     letter-spacing: 0em;
     color:#6B708D;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
 }
 
 nav {
@@ -22,6 +25,8 @@ nav {
 
 .nav-logo {
     padding:0px 0px 0px 10px;
+    height: 18px;
+    width: 60px;
 }
 .nav-menu {
     list-style: none;
@@ -37,7 +42,7 @@ nav {
 }
 
 #nav-home {
-    color:#072AC8
+    color:#0082F3;
 } 
 
 .burger-menu {
@@ -58,6 +63,7 @@ nav {
     color: white;
     text-decoration: none;
     text-align: center;
+    font-weight: 400;
     padding: 15px 30px;
 }
 
@@ -67,6 +73,12 @@ nav {
     justify-content:space-between;
     align-items: center;
     padding: 0px 30px;
+}
+
+.hero-content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -82,15 +94,10 @@ h1 {
     font-weight: 400;
     line-height: 25px;
     text-align: center;
-    width:90%;
+    max-width:90%;
     margin: 0px 0px 40px;
 }
 
-.hero-images {
-    display:flex;
-    align-items: center;
-    position:relative;
-}
 
 #hero-link1 {
     background-color:#072AC8;
@@ -109,11 +116,16 @@ h1 {
     color: #6B708D;
 }
 
-#hero-img {
-    width: 80%;
-    object-fit: contain;
-    display:block;
-    margin: auto;
+.hero-images {
+    position:relative;
+    margin:40px 0 0 0;
+    width: 560px;
+    height: 625.8px;
+    background-image: url(./Project-assets/hero-section/hero-image.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position-x: center; 
+    width: 100%;    
 }
 
 #card1-img {
@@ -127,11 +139,245 @@ h1 {
 .hero-logos {
     height: 208px;
     width: 100%;
+    margin:40px 0 0 0;
     display:grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
     gap:20px 50px;
+}
+
+#Amazon-logo {
+    display:none;
+}
+
+.clients-container {
+    height: 500px;
+    background-color: #292E47;
+    margin: 60px 0 0 0;
+    background-image: url(./Project-assets/testimonial-section/orbit.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.clients-container h2 {
+    color:#ECF7FF;
+    font-size:40px;
+    line-height: 60px;
+    text-align: center;
+    margin: 20px 0 0 0;
+    max-width: 400px;
+}
+
+.clients-container p {
+    color:#FFC600;
+    font-size:24px;
+    line-height: 40px;
+    text-align: center;
+    width: 75%;
+}
+
+#clients-example {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 170px;
+}
+#clients-example-img {
+    width:50px;
+    height:50px;
+    border-radius:50px;
+}
+
+#clients-example-name {
+    color:#A2D6F9;
+    font-size:17px;
+    text-align:left;
+    line-height: 1;
+    margin:0;
+    width: fit-content;
+    height: 20px;
+}
+
+#clients-example-firm {
+    color:#ECF7FF;
+    font-size:13px;
+    text-align: left;
+    line-height: 1;
+    margin:0;
+    width: fit-content;
+    height: 20px;
+}
+
+.clients-emojis img {
+    display:none;
+}
+#emoji-top-left {
+    top:10%;
+    left:10%;
+}
+
+#emoji-top-right {
+    top:10%;
+    right:10%;
+}
+
+#emoji-bottom-left {
+    bottom:10%;
+    left: 10%;
+}
+
+#emoji-bottom-right {
+    bottom:10%;
+    right: 10%;
+}
+
+.services h2 {
+    font-size: 40px;
+    color: #292E47;
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+    margin:20px 0 10px;
+}
+
+.services-container {
+    margin: 40px 0 0;
+    padding:0px 30px;
+    display:grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 15px;
+}
+
+#service-1, #service-2, #service-3 {
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+#service-1-image, #service-2-image, #service-3-image {
+    width: 80px;
+    height: 80px;
+    background-color:#ECF7FF;
+    margin:40px 0 0 40px;
+    border-radius:50px;
+    position: relative;
+}
+
+.services img {
+    position:absolute;
+    top:25%;
+    left:25%;
+}
+
+#service-1-h3, #service-2-h3, #service-3-h3 {
+    color:#292E47;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    margin:30px 30px 20px;
+}
+
+#service-1-paragraph, #service-2-paragraph, #service-3-paragraph {
+    color:#292E47;
+    font-size: 17px;
+    font-weight: 400;
+    margin:0px 30px 10px;
+}
+
+#service-1-div-anchor, #service-2-div-anchor, #service-3-div-anchor {
+    margin:30px;
+}
+#service-1-anchor, #service-2-anchor, #service-3-anchor {
+    text-decoration: none;
+    color:#072AC8;
+}
+
+.questions {
+    background-color: #FFC600;
+    margin: 60px 0 0 0;
+}
+
+.questions-container {
+    height: 500px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.questions-container h2 {
+    color:#292E47;
+    font-size: 30px;
+}
+
+.questions-container p {
+    font-weight:400;    
+}
+
+.questions-form {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#questions-form-input {
+    height: 80px;
+    width: 393px;
+    background-color:#ECF7FF;
+    padding:0;
+    font-size: 17px;
+    color:red;
+    border:none;
+}
+
+#questions-form-button {
+    height: 80px;
+    width: 393px;
+    background-color: #072AC8;
+    color:#FFFFFF;
+    font-size: 20px;
+    border:none;
+}
+
+
+
+
+@media (max-width: 479px) {
+    h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .hero p {
+        min-width: 100%;
+    }
+    .hero-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #hero-link1 {
+        margin:0 0px 20px 0;
+    }
+    .clients-container h2 {
+        font-size:30px;
+        line-height: 40px;
+    }
+    .services h2 {
+        font-size: 30px;
+        margin:50px 0 10px;
+    }
+    .services-container {
+        margin: 30px 0 0;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -148,18 +394,44 @@ h1 {
         display:block;
         position:absolute;
         top: 0;
-        left: -5%;
+        left: -6%;
         max-width: 294px;
     }
     #card2-img {
         display:block;
         position:absolute;
-        left: auto;
-        top: auto;
-        right: -10%;
-        bottom: -20%;
+        right: -11%;
+        bottom: -22%;
         max-width: 290px
     }
+    .hero-logos {
+        margin:130px 0 0 0;
+    }
+    .clients-emojis img {
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+    .services h2 {
+        text-align: left;
+        margin:40px 0 10px;
+        padding:0 30px;
+    }
+    .services-container {
+        margin: 70px 0 0;
+        padding:0px 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 35px;
+        align-items: baseline;
+    }
+    #service-1, #service-2, #service-3 {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: stretch;
+    }
+    
 }
 
 @media (min-width: 992px) {
@@ -167,6 +439,9 @@ h1 {
         margin-top:70px;
     }
     nav {
+        padding:0px;
+    }
+    .nav-logo {
         padding:0px;
     }
     .nav-menu {
@@ -177,19 +452,109 @@ h1 {
     .nav-button {
         display:block;
         display: flex;  
-        height: 60px;
+        height: 50px;
     }
     .burger-menu {
         display:none;
     }
     .hero {
         flex-direction: row;
+        padding: 100px 30px 0px;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 915px;
+        min-height: 464px;
     }
-    
+    .hero-content {
+        max-width: 530px;
+        display:flex;
+        flex-direction: column;
+        align-items:baseline;
+    }
     h1 {
         font-size: 60px;
-        line-height: 70px;
+        line-height: 80px;
+        margin: 20px 0px 30px;
+        text-align: left;
+    }
+    .hero p {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: left;
+        max-width:85%;
+        margin: 0px 0px 40px;
+    }
+    .hero-links {
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content:flex-end;
+        align-items: center;
+    }
+    #hero-link1 {
+        margin:0 40px 0 20px;
+    }
+    .hero-images {
+        margin:0px;
+        background-position-y: center;
+        width: 100%;
+    }
+    #card1-img {
+        display:block;
+        position:absolute;
+        left: -18%;
+        top: 4%;
+        max-width: 290px;
+    }
+    #card2-img {
+        display:block;
+        position:absolute;
+        right: -25%;
+        bottom: -18%;
+        max-width: 290px;
+    }
+    .hero-logos {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        gap:16px;
+    }
+    #Amazon-logo {
+        display:block;
+    }
+    .clients-container {
+        height: 622px;
+        margin: 100px 0 0 0;
+    }
+    .clients-container h2 {
+        line-height: 60px;
         text-align: center;
-        color: #292E47;
+        margin: 20px 0 0 0;
+        max-width: fit-content;
+    }
+    .clients-container p {
+        width: 560px;
+    }
+    .clients-emojis img {
+        display: block;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+    }
+    .services h2 {
+        text-align: left;
+        margin:200px 0 10px;
+        padding:0 30px;
+    }
+    .services-container {
+        margin: 70px 0 0;
+        padding:0px 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 35px;
+        align-items: baseline;
+    }
+    #service-1, #service-2, #service-3 {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: stretch;
     }
 }

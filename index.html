@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -29,24 +29,116 @@
     </header>
 
     <section class="hero">
-        <h1>Empower Your Business With Stunning Design!</h1>
-        <p>Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
-        <div>
-            <button id="hero-link1" href="#">Get in touch</button>
-            <a id="hero-link2" href="#">See our work</a>
+        <div class="hero-content">
+            <h1>Empower Your Business With Stunning Design!</h1>
+            <p>Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
+            <div class="hero-links">
+                <button id="hero-link1" href="#">Get in touch</button>
+                <a id="hero-link2" href="#">See our work</a>
+            </div>
         </div>
+        
         <div class="hero-images">
-        <img id="hero-img" src="./Project-assets/hero-section/hero-image.png" alt="hero-image">
-        <img id="card1-img" src="./Project-assets/hero-section/card-1.png" alt="card1-image">
-        <img id="card2-img" src="./Project-assets/hero-section/card-2.png" alt="card2-image">
+            <img id="card1-img" src="./Project-assets/hero-section/card-1.png" alt="card1-image">
+            <img id="card2-img" src="./Project-assets/hero-section/card-2.png" alt="card2-image">
         </div>
+
+    </section>
+
+    <section>
         <div class="hero-logos">
-            <img src="./Project-assets/logos/airbnb-logo.svg" alt="Airbnb-logo">
-            <img src="./Project-assets/logos/google-logo.svg" alt="Google-logo">
-            <img src="./Project-assets/logos/microsoft-logo.svg" alt="Microsoft-logo">
-            <img src="./Project-assets/logos/fedex-logo.svg" alt="Fedex-logo">
+            <div id="Airbnb-logo">
+                <img src="./Project-assets/logos/airbnb-logo.svg" alt="Airbnb-logo">
+            </div>
+            <div id="Google-logo">
+                <img src="./Project-assets/logos/google-logo.svg" alt="Google-logo">
+            </div>
+            <div id="Microsoft-logo">
+                <img src="./Project-assets/logos/microsoft-logo.svg" alt="Microsoft-logo">
+            </div>
+            <div id="Fedex-logo">
+                <img src="./Project-assets/logos/fedex-logo.svg" alt="Fedex-logo">
+            </div>
+            <div id="Amazon-logo">
+                <img  src="./Project-assets/logos/amazon-logo.svg" alt="Amazon-logo">
+            </div>
         </div>
     </section>
+
+    <section class="projects">
+        <h2>Recent Projects</h2>
+
+    </section>
+
+    <section class="clients">
+        <div class="clients-container">
+            <h2>Hear What Our Clients Have to Say</h3>
+            <p>"Circle helped us through every stage of our startup. We really enjoyed working with you."</p>
+            <div id="clients-example">
+                <div>
+                    <img id="clients-example-img" src="./Project-assets/testimonial-section/profile.png" alt="profile-image">
+                </div>
+                <div>
+                    <p id="clients-example-name">Kristin Watson</p>
+                    <p id="clients-example-firm">Booking.com</p>
+                </div>
+            </div>
+
+            <div class="clients-emojis">
+                <img id="emoji-top-left" src="./Project-assets/testimonial-section/memoji-1.png" alt="Memoji1 image">
+                <img id="emoji-top-right" src="./Project-assets/testimonial-section/memoji-4.png" alt="Memoji4 image">
+                <img id="emoji-bottom-left" src="./Project-assets/testimonial-section/memoji-3.png" alt="Memoji3 image">
+                <img id="emoji-bottom-right" src="./Project-assets/testimonial-section/memoji-2.png" alt="Memoji2 image">
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div id="service-1">
+                <div id="service-1-image">
+                    <img src="/Project-assets/services-section/icons/1.svg" alt="Service-1 image">
+                </div>
+                <h3 id="service-1-h3">User Interface Design</h3>
+                <p id="service-1-paragraph">Circle provides you with a stunning user interface design that is accessible to everyone.</p>
+                <p id="service-1-div-anchor"><a id="service-1-anchor" href="#">Learn More</a></p>
+            </div>
+            <div id="service-2">
+                <div id="service-2-image">
+                    <img src="/Project-assets/services-section/icons/2.svg" alt="Service-2 image">
+                </div>
+                <h3 id="service-2-h3">User Experience Design</h3>
+                <p id="service-2-paragraph">Circle always focuses on delivering the best user experience to your customers.</p>
+                <p id="service-2-div-anchor"><a id="service-2-anchor" href="#">Learn More</a></p>
+            </div>
+            <div id="service-3">
+                <div id="service-3-image">
+                    <img src="/Project-assets/services-section/icons/3.svg" alt="Service-3 image">
+                </div>
+                <h3 id="service-3-h3">Application Development</h3>
+                <p id="service-3-paragraph">We develop high-quality mobile and web applications using the latest technology stack.</p>
+                <p id="service-3-div-anchor"><a id="service-3-anchor" href="#">Learn More</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="questions">
+        <div class="questions-container">
+            <h2>Do you have any questions?</h2>
+            <p>Let us help you!</p>
+            <form class="questions-form">
+                <input id="questions-form-input" type="email" placeholder="Enter your email" required />
+                <br>
+                <button id="questions-form-button" type="submit" href="#">Suscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="questions">
+        <h2>Footer</h2>
+
+    </footer>
 
     <script src="index.js"></script>
 </body>
