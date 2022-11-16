@@ -13,7 +13,9 @@
 <body>
     <header>
         <nav>
-            <img src="./Project-assets/logos/circle.svg" class="nav-logo">
+            <a class="nav-logo" href="#">
+                <img src="./Project-assets/logos/circle.svg" alt="Logo Circle">
+            </a>
             <ul class="nav-menu">
                 <li><a href="#" id="nav-home">Home</a></li>
                 <li><a href="#">Projects</a></li>
@@ -21,7 +23,7 @@
             </ul>
             <div class="nav-button"><a href="#">Contact Us</a></div>
             <button class="burger-menu">
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <svg class="svg cursor-hand" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                   </svg>
             </button>
@@ -33,7 +35,7 @@
             <h1>Empower Your Business With Stunning Design!</h1>
             <p>Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
             <div class="hero-links">
-                <button id="hero-link1" href="#">Get in touch</button>
+                <button id="hero-link1" class="cursor-hand" href="#">Get in touch</button>
                 <a id="hero-link2" href="#">See our work</a>
             </div>
         </div>
@@ -67,6 +69,38 @@
 
     <section class="projects">
         <h2>Recent Projects</h2>
+        <div class="projects-grid">
+            <article id="projecxts-article-1">
+                <div class="projects-article-image">
+                    <img src="./Project-assets/projects-section/1.jpg">
+                </div>
+                <div class="projects-article-texts">
+                    <h3>Simplify</h3>
+                    <p>UI Design & App Development</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </article>
+            <article id="project-article-2">
+                <div class="projects-article-image">
+                    <img src="./Project-assets/projects-section/2.jpg">
+                </div>
+                <div class="projects-article-texts">
+                    <h3>Dashcoin</h3>
+                    <p>Web Development</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </article>
+            <article id="project-article-3">
+                <div class="projects-article-image">
+                    <img src="./Project-assets/projects-section/3.jpg">
+                </div>
+                <div class="projects-article-texts">
+                    <h3>Vectorify</h3>
+                    <p>User Experience Design</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </article>
+        </div>
 
     </section>
 
@@ -123,21 +157,40 @@
         </div>
     </section>
 
-    <section class="questions">
-        <div class="questions-container">
+    <section class="questions-container">
+        <div class="questions-texts">
             <h2>Do you have any questions?</h2>
-            <p>Let us help you!</p>
+            <p>Let us help you!</p>            
+        </div>
+        <div>
             <form class="questions-form">
-                <input id="questions-form-input" type="email" placeholder="Enter your email" required />
+                <div class=input-container>
+                    <img src="/Project-assets/newsletter/icon/mail.svg" class="icon-form" alt ="Email icon"/>
+                    <input id="questions-form-input" type="email" placeholder="Enter your email" required />
+                </div>
                 <br>
-                <button id="questions-form-button" type="submit" href="#">Suscribe</button>
+                <button id="questions-form-button" class="cursor-hand" type="submit" href="#">Suscribe</button>
             </form>
         </div>
     </section>
 
-    <footer class="questions">
-        <h2>Footer</h2>
-
+    <footer class="footer">
+        <div class="footer-firstpart">
+            <div>
+                <a class="nav-logo" href="#">
+                    <img src="./Project-assets/logos/circle.svg" class="footer-logo">
+                </a>                
+            </div>
+            <p>2972 Westheimer Rd. Santa Ana, <br> Illinois 85486</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Team</a>
+            <a href="#">Services</a>
+            <a href="#">About Us</a>
+            <a href="#">Press</a>
+            <a href="#">Projects</a>
+            <a href="#">Privacy Policy</a>
+        </div>
     </footer>
 
     <script src="index.js"></script>

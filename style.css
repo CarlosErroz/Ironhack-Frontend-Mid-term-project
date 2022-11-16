@@ -24,10 +24,16 @@ nav {
 }
 
 .nav-logo {
-    padding:0px 0px 0px 10px;
+    padding:0px;
     height: 18px;
     width: 60px;
 }
+
+.nav-logo img{
+    width: 100%;
+    height: 100%;
+}
+
 .nav-menu {
     list-style: none;
     text-align: left;
@@ -65,6 +71,10 @@ nav {
     text-align: center;
     font-weight: 400;
     padding: 15px 30px;
+}
+
+.cursor-hand {
+    cursor: pointer;
 }
 
 .hero {
@@ -149,6 +159,60 @@ h1 {
 
 #Amazon-logo {
     display:none;
+}
+
+.projects {
+    margin-top:40px;
+    padding:0px 30px;
+}
+
+.projects h2{
+    font-size: 40px;
+    color:#292E47;
+    text-align: center;
+    margin: 20px 0px 10px;
+}
+
+.projects-grid {
+    margin-top:40px;
+    display:grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+}
+
+.projects-article-image {
+    height: 240px;
+}
+
+.projects-article-image img {
+    height: 240px;
+    width: 100%;
+    object-fit:cover;
+}
+
+.projects-article-texts {
+    height: 204px;
+    background-color: #FFFFFF;
+}
+.projects-article-texts h3 {
+    font-size: 24px;
+    color:#292E47;
+    font-weight: 500;
+    padding: 30px 30px 20px;
+    margin:0px;
+}
+
+.projects-article-texts p {
+    color:#292E47;
+    font-weight: 400;
+    padding: 0px 30px 10px;
+    margin:0 0 30px 0;
+}
+
+.projects-article-texts a {
+    text-decoration: none;
+    color:#072AC8;
+    padding:0px 30px 30px 30px;
 }
 
 .clients-container {
@@ -301,42 +365,67 @@ h1 {
     color:#072AC8;
 }
 
-.questions {
+.questions-container {
     background-color: #FFC600;
     margin: 60px 0 0 0;
-}
-
-.questions-container {
-    height: 500px;
+    height: 440px;
     display:flex;
     flex-direction:column;
     align-items: center;
     justify-content: space-evenly;
+    padding:30px 0;
 }
 
-.questions-container h2 {
+.questions-texts {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.questions-texts h2 {
     color:#292E47;
     font-size: 30px;
+    margin:20px 0;
 }
 
-.questions-container p {
-    font-weight:400;    
+.questions-texts p {
+    font-weight:400;
+    text-align: center;    
 }
 
 .questions-form {
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
+.input-container {
+    position: relative;
+}
+
+.icon-form {
+    position:absolute;
+    left: 8%;
+    top: 27%;
+    right: auto;
+    bottom: auto;
+    width: 30px;
+    height: 30px;
+}
+  
 #questions-form-input {
-    height: 80px;
-    width: 393px;
+    height: 64px;
+    width: 311px;
     background-color:#ECF7FF;
-    padding:0;
+    padding:8px 12px 8px 70px;
     font-size: 17px;
-    color:red;
     border:none;
+    outline: none;
+}
+
+#questions-form-input:focus {
+    height: 62px;
+    width: 309px;
+    border: 1px solid #0082F3;
 }
 
 #questions-form-button {
@@ -344,11 +433,54 @@ h1 {
     width: 393px;
     background-color: #072AC8;
     color:#FFFFFF;
-    font-size: 20px;
+    font-size: 17px;
     border:none;
 }
 
+#questions-form-button:hover {
+    background-color:#292E47;
+  }
 
+footer {
+    margin-top: 60px;
+    padding:0px 30px 100px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-firstpart {
+    width: 260px;
+}
+.footer-firstpart img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 30px;  
+}
+
+.footer-firstpart p {
+    text-align: center;
+    line-height: 25px;
+    margin:0px;
+    font-weight: 400;
+}
+
+.footer-links {
+    margin-top:30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color:#0000EE;
+    font-weight: 400;
+}
 
 
 @media (max-width: 479px) {
@@ -377,6 +509,18 @@ h1 {
     }
     .services-container {
         margin: 30px 0 0;
+    }
+    #questions-form-input {
+        height: 64px;
+        width: 161px;
+    }
+    #questions-form-input:focus {
+        height: 62px;
+        width: 159px;
+    }
+    
+    #questions-form-button {
+        width: 243px;
     }
 }
 
@@ -407,6 +551,14 @@ h1 {
     .hero-logos {
         margin:130px 0 0 0;
     }
+    .projects h2{
+        text-align: left;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 35px;
+        margin-top:80px;
+    }
     .clients-emojis img {
         display: block;
         width: 100px;
@@ -430,6 +582,32 @@ h1 {
         flex-direction: column;
         justify-content: space-between;
         align-self: stretch;
+    }
+    .questions-texts h2 {
+        font-size: 40px;
+    }
+    .questions-form {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #questions-form-button {
+        width: 185px;
+        margin-left:20px
+    }
+    footer {
+        flex-direction: row;
+    }
+    .footer-firstpart img {
+        margin-left: 0;
+    }
+    .footer-firstpart p {
+        text-align: left;
+    }
+    .footer-links {
+        margin-top:0px;
+    }
+    .footer-links a {
+        height: 48px;
     }
     
 }
@@ -520,6 +698,17 @@ h1 {
     #Amazon-logo {
         display:block;
     }
+    .projects {
+        margin-top:200px;
+    }
+    .projects h2{
+        text-align: left;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 40px;
+        margin-top:80px;
+    }
     .clients-container {
         height: 622px;
         margin: 100px 0 0 0;
@@ -556,5 +745,32 @@ h1 {
         flex-direction: column;
         justify-content: space-between;
         align-self: stretch;
+    }
+    .questions-texts h2 {
+        font-size: 40px;
+    }
+    .questions-form {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #questions-form-button {
+        width: 185px;
+        margin-left:20px
+    }
+    footer {
+        flex-direction: row;
+        margin-top:200px;
+    }
+    .footer-firstpart img {
+        margin-left: 0;
+    }
+    .footer-firstpart p {
+        text-align: left;
+    }
+    .footer-links {
+        margin-top:0px;
+    }
+    .footer-links a {
+        height: 48px;
     }
 }
