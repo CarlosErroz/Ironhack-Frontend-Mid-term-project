@@ -8,10 +8,12 @@ body {
     line-height: 22px;
     letter-spacing: 0em;
     color:#6B708D;
+}
+
+.container {
     max-width: 1100px;
-    margin-right: auto;
     margin-left: auto;
-    height: 100%;
+    margin-right: auto;
 }
 
 nav {
@@ -126,15 +128,16 @@ h1 {
     color: #6B708D;
 }
 
-.hero-main-image {
+.hero-images-container {
     position:relative;
     margin:40px 0 0 0;
-    width: 560px;
-    height: 625.8px;
-    background-image: url(./Project-assets/hero-section/hero-image.png);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position-x: center;   
+    max-width: 560px;
+    max-height: 625px;
+}
+
+#Hero-image {
+    width:100%;
+    height: 100%;
 }
 
 #card1-img {
@@ -154,6 +157,14 @@ h1 {
     justify-items: center;
     align-items: center;
     gap:20px 50px;
+}
+
+.hero-logos img {
+    filter:grayscale(1)
+}
+
+.hero-logos img:hover {
+    filter:grayscale(0);
 }
 
 #Amazon-logo {
@@ -466,6 +477,7 @@ footer {
     line-height: 25px;
     margin:0px;
     font-weight: 400;
+    color:#292E47;
 }
 
 .footer-links {
@@ -484,11 +496,10 @@ footer {
 
 /* a partir de aquí ajustes exclusivos a landing "Contact"
 */
-
 .contact-container {
     padding:0% 30px;
-    max-width: 100%;
 }
+
 .h1-contact {
     font-size: 40px;
     text-align: left;
@@ -556,6 +567,7 @@ footer {
 .form-container textarea {
     height: 184px;
     font-size:17px;
+    font-family: 'Roboto', sans-serif;
     color:#6B708D;
     margin-top:10px;
     padding:8px 12px 8px 20px;
@@ -572,8 +584,73 @@ footer {
     height: 80px;
 }
 
-/* a partir de aquí ajustes exclusivos a landing "Projects"
+/* a partir de aquí ajustes exclusivos a landing "project-single / projects"
 */
+#the-project {
+    padding:0px 30px;
+}
+
+#the-project h2 {
+    font-size: 40px;
+    color:#292E47;
+    margin: 30px 0px 45px;
+}
+
+#the-project-text1 {
+    font-size: 20px;
+    margin:0px 0px 10px 0px;
+}
+
+#the-project-text2 {
+    font-size: 20px;
+    color:#292E47;
+    font-weight: 400;
+    margin:0px 5px 0px 0px;
+}
+
+#the-project-text2 span {
+    color:#6B708D;
+}
+
+#the-project-image {
+    margin-top:40px;
+    margin-bottom:60px;
+}
+#the-project-image img {
+    height: 444px;
+    width: 100%;
+    object-fit:cover;
+}
+
+#the-project-description {
+    font-size: 20px;
+    color:#292E47;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+#the-project-description p {
+    margin:0 0 10px 0;
+}
+
+#h2-Others {
+    margin-top:100px;
+}
+
+.projects button {
+    width: 100%;
+    background-color:#6B708D;
+    color: white;
+    border:none;
+    font-size:17px;
+    margin:20px 0;
+    padding:20px 0;
+}
+
+.projects button:hover {
+    background-color: #292E47;
+}
+
 
 
 /* a partir de aquí ajustes a tamaños por los @media
@@ -733,7 +810,20 @@ footer {
     }    
     #form-button {
         grid-column-end: 7;
-    }  
+    }
+    
+    /* a partir de aquí ajustes exclusivos a landing "Projects"
+    */
+    #the-project-text1 {
+        float: left;
+    }
+    #the-project-text2 {
+        float: right;
+    }
+
+    #the-project h2 {
+        font-size: 60px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -761,9 +851,9 @@ footer {
     }
     .hero {
         flex-direction: row;
-        padding: 100px 30px 0px;
+        padding: 50px 30px 0px;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         min-width: 915px;
         min-height: 464px;
     }
@@ -795,9 +885,6 @@ footer {
     #hero-link1 {
         margin:0 40px 0 20px;
     }
-    .hero-allimages {
-        width: 385px;
-    }
     .hero-main-image {
         margin:0px;
         width:auto;
@@ -815,7 +902,7 @@ footer {
         display:block;
         position:absolute;
         right: -25%;
-        bottom: -10%;
+        bottom: -20%;
         max-width: 290px;
     }
     .hero-logos {
@@ -901,6 +988,7 @@ footer {
     .footer-links a {
         height: 48px;
     }
+
     /*adaptaciones para landing "Contact*/
     .h1-contact {
         font-size: 60px;
@@ -935,4 +1023,25 @@ footer {
     #form-button {
         grid-column-end: 7;
     }
+
+    /* a partir de aquí ajustes exclusivos a landing "Projects"
+    */
+    #the-project-text1 {
+        float: left;
+    }
+    #the-project-text2 {
+        float: right;
+    }
+
+    #the-project h2 {
+        font-size: 60px;
+        margin-top:100px;
+    }
+    #the-project-text1 {
+        font-size: 24px;
+    }
+    #the-project-image {
+        margin-top:60px;
+    }    
+    
 }

@@ -11,17 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="container">
         <nav>
-            <a class="nav-logo" href="#">
+            <a class="nav-logo" href="/index.html">
                 <img src="./Project-assets/logos/circle.svg" alt="Logo Circle">
             </a>
             <ul class="nav-menu">
-                <li><a href="#" id="nav-home">Home</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="/index.html" id="nav-home">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
-            <div class="nav-button"><a href="#">Contact Us</a></div>
+            <div class="nav-button"><a href="/contact.html">Contact Us</a></div>
             <button class="burger-menu">
                 <svg class="svg cursor-hand" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
@@ -30,24 +30,25 @@
         </nav>
         </header>
 
-    <section class="hero">
+    <section class="hero container">
         <div class="hero-content">
             <h1>Empower Your Business With Stunning Design!</h1>
             <p>Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
             <div class="hero-links">
-                <button id="hero-link1" class="cursor-hand" href="#">Get in touch</button>
+                <button id="hero-link1" class="cursor-hand" onclick="location.href='/contact.html'">Get in touch</button>
                 <a id="hero-link2" href="#">See our work</a>
             </div>
         </div>        
         <div class="hero-allimages">
-            <div class="hero-main-image">
+            <div class="hero-images-container">
+                <img id="Hero-image" src="./Project-assets/hero-section/hero-image.png" alt="Main-image">
                 <img id="card1-img" src="./Project-assets/hero-section/card-1.png" alt="card1-image">
                 <img id="card2-img" src="./Project-assets/hero-section/card-2.png" alt="card2-image">
             </div>
         </div>
     </section>
 
-    <section>
+    <section class="container">
         <div class="hero-logos">
             <div id="Airbnb-logo">
                 <img src="./Project-assets/logos/airbnb-logo.svg" alt="Airbnb-logo">
@@ -67,17 +68,17 @@
         </div>
     </section>
 
-    <section class="projects">
+    <section class="projects container">
         <h2>Recent Projects</h2>
         <div class="projects-grid">
-            <article id="projecxts-article-1">
+            <article id="projects-article-1">
                 <div class="projects-article-image">
                     <img src="./Project-assets/projects-section/1.jpg">
                 </div>
                 <div class="projects-article-texts">
                     <h3>Simplify</h3>
                     <p>UI Design & App Development</p>
-                    <a href="#">Learn More</a>
+                    <a href="/project-single.html" target="_blank">Learn More</a>
                 </div>
             </article>
             <article id="project-article-2">
@@ -87,7 +88,7 @@
                 <div class="projects-article-texts">
                     <h3>Dashcoin</h3>
                     <p>Web Development</p>
-                    <a href="#">Learn More</a>
+                    <a href="/project-single.html" target="_blank>Learn More">Learn More</a>
                 </div>
             </article>
             <article id="project-article-3">
@@ -97,11 +98,10 @@
                 <div class="projects-article-texts">
                     <h3>Vectorify</h3>
                     <p>User Experience Design</p>
-                    <a href="#">Learn More</a>
+                    <a href="/project-single.html" target="_blank>Learn More">Learn More</a>
                 </div>
             </article>
         </div>
-
     </section>
 
     <section class="clients">
@@ -127,7 +127,7 @@
         </div>
     </section>
 
-    <section class="services">
+    <section class="services container">
         <h2>Our Services</h2>
         <div class="services-container">
             <div id="service-1">
@@ -174,7 +174,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer container">
         <div class="footer-firstpart">
             <div>
                 <a class="nav-logo" href="#">
