@@ -22,7 +22,7 @@ nav {
     align-items: center;
     color:#6B708D;
     height: 60px;
-    padding: 0px 30px;
+    padding:0px 30px;
 }
 
 .nav-logo {
@@ -37,16 +37,39 @@ nav {
 }
 
 .nav-menu {
+    position:fixed;
+    top:60px;
+    left:-100%;
+    width: 100%;
+    height: 0;
+    opacity:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #C8C8C8;
+    padding:0%;
+    margin:0%;
+    transition-duration:0.5s;
+}
+
+.nav-menu.active {
+    height:180px;
+    left:0%;
+    opacity:1;
+}
+
+.nav-menu li {
     list-style: none;
-    text-align: left;
-    display: none;
-    padding:0px;
+    padding:20px;
 }
 
 .nav-menu a {
     text-decoration: none;
-    padding:20px;
     color:#6B708D;
+}
+
+.nav-menu a:hover {
+    color:#072AC8;
 }
 
 #nav-home {
@@ -55,11 +78,23 @@ nav {
 
 .burger-menu {
     border:none;
-    background-color: transparent;
-    padding:0px;
+    padding:21px 21px 21px 21px;
 }
-.svg {
-    padding:18px;
+
+.burger-menu.active {
+    background-color: #C8C8C8;    
+}
+
+.burger-span {
+    display:block;
+    width: 15px;
+    height: 2px;
+    margin:3px auto;
+    background-color:#292E47;
+}
+
+.burger-span.active {
+    background-color:#FFFFFF;
 }
 
 .nav-button {
@@ -854,8 +889,24 @@ footer {
     }
     .nav-menu {
         display:block;
+        padding:0;
         display:flex;
         justify-content: space-between;
+    }
+    .nav-menu {
+        position:relative;
+        left:auto;
+        top:auto;
+        width: auto;
+        opacity:1;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color:transparent
+        transition-duration:0s;
+    }
+    .nav-menu a {
+        padding:5px;
     }
     .nav-button {
         display:block;
@@ -867,7 +918,7 @@ footer {
     }
     .hero {
         flex-direction: row;
-        padding: 50px 30px 0px;
+        padding: 80px 30px 0px;
         justify-content: space-between;
         align-items: center;
         min-width: 915px;
