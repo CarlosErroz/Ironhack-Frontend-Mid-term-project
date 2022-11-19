@@ -612,14 +612,27 @@ footer {
     color:#6B708D;
 }
 
-#the-project-image {
+#the-project-image-container {
     margin-top:40px;
     margin-bottom:60px;
-}
-#the-project-image img {
     height: 444px;
+    position:relative;
+}
+#the-project-image-back {
+    height: 100%;
     width: 100%;
-    object-fit:cover;
+    opacity: 50%;
+    filter: blur(40px);
+    object-fit: cover;
+}
+
+#the-project-image-front {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position:absolute;
+    top:0;
+    left:0;
 }
 
 #the-project-description {
@@ -823,6 +836,9 @@ footer {
 
     #the-project h2 {
         font-size: 60px;
+    }
+    #the-project-image-container {
+        margin-top:60px;
     }
 }
 
@@ -1040,8 +1056,8 @@ footer {
     #the-project-text1 {
         font-size: 24px;
     }
-    #the-project-image {
-        margin-top:60px;
-    }    
+    #the-project-image-container {
+        margin-top:70px;
+    }  
     
 }

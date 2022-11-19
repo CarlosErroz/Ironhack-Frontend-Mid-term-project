@@ -1,11 +1,13 @@
 /*
-ejemplo para la fecha
-<div id="current_date"></p>
-            <script>
-            date = new Date();
-            year = date.getFullYear();
-            month = date.getMonth() + 1;
-            day = date.getDate();
-            document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
-            </script>
+Fecha actual en página de proyecto
+*/
+
+let date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth() + 1;
+let day = date.getDate();
+document.getElementById("current-date").innerHTML = day + "/" + month + "/" + year;
+
+/*
+Menú hamburguesa
 */
