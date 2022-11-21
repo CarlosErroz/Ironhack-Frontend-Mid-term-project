@@ -1,11 +1,8 @@
 /*
-Cargar contenidos: son 6
+Cargar contenidos: son 6... pero ya vendrá del index.js
 */
 
 
-
-
-
 /*
-Cargar extra-contenidos: otros 6
+Botón cargar extra-contenidos: otros 6
 */

@@ -10,5 +10,5 @@ const day = date.getDate();
 document.getElementById("current-date").innerHTML = day + "/" + month + "/" + year;
 
 /*
-Cargar el contenido que debería venir ser + otros 3
+Cargar contenidos: son 3 (¿cómo hacer que no se repita?)... pero ya vendrá del index.js
 */
