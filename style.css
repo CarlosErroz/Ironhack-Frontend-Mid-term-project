@@ -437,7 +437,7 @@ h1 {
     text-align: center;    
 }
 
-.questions-form {
+#questions-form {
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -485,6 +485,22 @@ h1 {
 #questions-form-button:hover {
     background-color:#292E47;
   }
+
+#message-ok-submit {
+    background-color: rgba(200,200,200,0.5);
+    color:green;
+    width: 393px;
+    text-align: center;
+    display:none;
+}
+
+#message-ko-submit {
+    background-color: rgba(200,200,200,0.5);
+    color:red;
+    width: 393px;
+    text-align: center;
+    display:none;
+}
 
 footer {
     margin-top: 60px;
@@ -806,7 +822,7 @@ footer {
     .questions-texts h2 {
         font-size: 40px;
     }
-    .questions-form {
+    #questions-form {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -1031,7 +1047,7 @@ footer {
     .questions-texts h2 {
         font-size: 40px;
     }
-    .questions-form {
+    #questions-form {
         flex-direction: row;
         justify-content: space-between;
     }
