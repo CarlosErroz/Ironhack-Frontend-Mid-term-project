@@ -557,7 +557,7 @@ footer {
     margin:0 0 40px;
 }
 
-.form-container {
+#form-container {
     display:grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(7, fr);
@@ -599,12 +599,12 @@ footer {
     grid-row-end: 7;
 }
 
-.form-container label {
+#form-container label {
     font-size: 20px;
     font-weight: 400;
 }
 
-.form-container input {
+#form-container input {
     height: 54px;
     font-size:17px;
     color:#6B708D;
@@ -613,9 +613,10 @@ footer {
     background-color: #6B708D1A;
     border:none;
     width:95%;
+    outline: none;
 }
 
-.form-container textarea {
+#form-container textarea {
     height: 184px;
     font-size:17px;
     font-family: 'Roboto', sans-serif;
@@ -625,15 +626,48 @@ footer {
     background-color: #6B708D1A;
     border:none;
     width:95%;
+    outline: none; 
 }
 
-.form-container button {
+#form-container button {
     background-color: #072AC8;
     color:#FFFFFF;
     border:none;
     font-size: 17px;
     height: 80px;
 }
+
+#ErrorMessageTextArea {
+    background-color: rgba(200,200,200,0.5);
+    color:red;
+    width: 100%;
+    height: 40px;
+    padding-top:10px;
+    text-align: center;
+    display:none;
+}
+
+#contact-ok-submit {
+    background-color: rgba(200,200,200,0.5);
+    color:green;
+    width: 100%;
+    height: 40px;
+    padding-top:10px;
+    text-align: center;
+    display:none;
+}
+
+#contact-ko-submit {
+    background-color: rgba(200,200,200,0.5);
+    color:red;
+    width: 100%;
+    height: 40px;
+    padding-top:10px;
+    text-align: center;
+    display:none;
+}
+
+
 
 /* a partir de aquí ajustes exclusivos a landing "project-single / projects"
 */
@@ -850,7 +884,7 @@ footer {
     .h1-contact {
         font-size: 60px;
     }
-    .form-container {
+    #form-container {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(6, fr);
     }
@@ -1078,7 +1112,7 @@ footer {
         margin-top:190px;
         margin-bottom: 70px;
     }
-    .form-container {
+    #form-container {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(6, fr);
     }

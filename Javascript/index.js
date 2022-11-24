@@ -69,13 +69,13 @@ Verificación formulario de email
 
 const formulario = document.getElementById("questions-form");
 
-const url ="https://jsonplaceholder.typicode.com/posts";
+const urlQuestionsForm ="https://jsonplaceholder.typicode.com/posts";
 
-// funnción para hacer el fetch-post
+// función para hacer el fetch-post
 const postEmail = async () => {
   const newEmail = new FormData(formulario)
   try {
-    const response = await fetch (url, {
+    const response = await fetch (urlQuestionsForm, {
       method: "POST",
       body: JSON.stringify(newEmail)
     })
