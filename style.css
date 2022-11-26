@@ -37,7 +37,7 @@ nav {
 }
 
 .nav-menu {
-    position:fixed;
+    position:absolute;
     top:60px;
     left:-100%;
     width: 100%;
@@ -100,6 +100,8 @@ nav {
 .nav-button {
     background-color:#072AC8;
     display:none;
+    position:relative;
+    overflow:hidden;
 }
 
 .nav-button a{
@@ -108,6 +110,22 @@ nav {
     text-align: center;
     font-weight: 400;
     padding: 15px 30px;
+}
+
+.nav-button:before {
+    position: absolute;
+    content:"";
+    width: 50px;
+    height: 100%;
+    background-color: rgb(250, 250, 250,0.3);
+    top:0;
+    left:-70px;
+    transform:skewX(-30deg);
+    transition: all 0.5s;
+}
+
+.nav-button:hover:before {
+    left:180px;
 }
 
 .cursor-hand {
@@ -135,6 +153,9 @@ h1 {
     color: #292E47;
     font-weight: 700;
     margin: 20px 0px 30px;
+    animation: becomeBigger 1.2s;
+    animation-timing-function: ease;
+    animation-delay: 2s;
 }
 
 .hero p {
@@ -156,6 +177,24 @@ h1 {
     border:none;
     padding: 15px 30px;
     margin:0 40px 0 0;
+    position:relative;
+    overflow: hidden;
+}
+
+#hero-link1:before {
+    position: absolute;
+    content:"";
+    width: 50px;
+    height: 100%;
+    background-color: rgb(250, 250, 250,0.3);
+    top:0;
+    left:-70px;
+    transform:skewX(-30deg);
+    transition: all 0.5s;
+}
+
+#hero-link1:hover:before {
+    left:180px;
 }
 
 #hero-link2 {
@@ -168,6 +207,8 @@ h1 {
     margin:40px 0 0 0;
     max-width: 560px;
     max-height: 625px;
+    animation-duration: 2s;
+    animation-name: movingFromLeft;
 }
 
 #Hero-image {
@@ -200,6 +241,8 @@ h1 {
 
 .hero-logos img:hover {
     filter:grayscale(0);
+    width: 130%;
+    transition-duration: 0.3s;
 }
 
 #Amazon-logo {
@@ -1196,3 +1239,26 @@ footer {
     }  
 }
 
+/* Animaciones
+    */
+
+@keyframes movingFromLeft {
+    from {
+        margin-left: 100%;
+        width:300%
+    }
+    
+    to {
+        margin-left:0%;
+        width: 300%
+    }
+}
+
+@keyframes becomeBigger {
+    from {}
+
+    to {
+        transform: scale(1.1);
+        color: fuchsia;
+    }
+}
