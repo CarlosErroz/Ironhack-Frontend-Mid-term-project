@@ -749,6 +749,41 @@ footer {
     background-color: #292E47;
 }
 
+.projectspage-article-image {
+    height: 240px;
+}
+
+.projectspage-article-image img {
+    height: 240px;
+    width: 100%;
+    object-fit:cover;
+}
+
+.projectspage-article-texts {
+    height: 204px;
+    background-color: #FFFFFF;
+}
+.projectspage-article-texts h3 {
+    font-size: 24px;
+    color:#292E47;
+    font-weight: 500;
+    padding: 30px 30px 20px;
+    margin:0px;
+}
+
+.projectspage-article-texts p {
+    color:#292E47;
+    font-weight: 400;
+    padding: 0px 30px 10px;
+    margin:0 0 30px 0;
+}
+
+.projectspage-article-texts a {
+    text-decoration: none;
+    color:#072AC8;
+    padding:0px 30px 30px 30px;
+}
+
 
 
 /* a partir de aquí ajustes a tamaños por los @media
@@ -953,7 +988,6 @@ footer {
         justify-content: space-between;
         align-items: center;
         background-color:transparent
-        transition-duration:0s;
     }
     .nav-menu a {
         padding:5px;
@@ -1160,5 +1194,5 @@ footer {
     #the-project-image-container {
         margin-top:70px;
     }  
-    
-    
+}
+

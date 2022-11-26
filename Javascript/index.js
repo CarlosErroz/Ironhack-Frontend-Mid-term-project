@@ -80,8 +80,14 @@ const postEmail = async () => {
     })
     if (response.ok) {
       const data= await response.json();
-      const message = document.getElementById('message-ok-submit');
-      message.style.display = 'block';
+      if (data) {
+        const message = document.getElementById('message-ok-submit');
+        message.style.display = 'block';
+      }
+      else {
+        const message = document.getElementById('message-ko-submit');
+        message.style.display = 'block';
+      }
     } else {
       const message = document.getElementById('message-ko-submit');
       message.style.display = 'block';

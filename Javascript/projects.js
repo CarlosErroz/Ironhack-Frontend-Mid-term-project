@@ -1,9 +1,35 @@
 /*
-Cargar contenidos: son 6... ya vendrá del index.js
+Cargar contenidos: son 6... NO TIENE QUE SER IGUAL QUE DEL INDEX.JS PARA QUE NO SEA RANDOM,SINO LOS 6 PRIMEROS
+POR ESO PUSE CLASES DIFERENTES"
 */
 
+async function loadContentProjects() {
+  try {
+    const response= await fetch("https://api.punkapi.com/v2/beers");
+    const data= await response.json();
+    // las 4 variables a sustituir
+    const projectTitles = document.querySelectorAll(".projectspage-article-texts h3");
+    const projectSubtitles = document.querySelectorAll(".projectspage-article-texts p");
+    const projectImages = document.querySelectorAll(".projectspage-article-image img");
+    const projectLinks = document.querySelectorAll(".projectspage-article-texts a");
+    for (i=0;i<projectTitles.length;i++) {
+      const newTitle = data[i].name;
+      projectTitles[i].innerHTML = newTitle;
+      const newSubtitle = data[i].tagline;
+      projectSubtitles[i].innerHTML = newSubtitle;
+      const newImage = data[i].image_url;
+      projectImages[i].src = newImage;
+      projectLinks[i].href = `/project-single.html?positionBeer=${i}`;
+    }
+  }
+  catch (error) {
+  console.log("Something went wrong!", error);
+}
+} 
+loadContentProjects();
+
 /*
-Botón cargar extra-contenidos: otros 6 (no toca los anteriores pero pueden repetirse y además la 2º vez sí los cambia)
+Botón cargar extra-contenidos: otros 6 A PARTIR DE LOS ANTERIORES (arreglado lo de que no toca anteriores y van en orden, no random)
 */
 
 function createProject() {
@@ -32,7 +58,7 @@ function createProject() {
     div2.appendChild(link);
 }
 
-const loadProjects = document.querySelector("#projects-button");
+const loadProjects = document.querySelector("#projectspage-button");
 
 loadProjects.addEventListener("click", function() {
   for (i=0;i<6;i++) {
@@ -52,15 +78,16 @@ async function newchangeContent() {
     const projectSubtitles = document.querySelectorAll(".projects-article-texts-new p");
     const projectImages = document.querySelectorAll(".projects-article-image-new img");
     const projectLinks = document.querySelectorAll(".projects-article-texts-new a");
+    const newOrderProjects = 6;
     for (i=0;i<projectTitles.length;i++) {
-      const randomPosition = Math.floor(Math.random() * data.length);
-      const newTitle = data[randomPosition].name;
+      const newTitle = data[newOrderProjects+i].name;
       projectTitles[i].innerHTML = newTitle;
-      const newSubtitle = data[randomPosition].tagline;
+      const newSubtitle = data[newOrderProjects+i].tagline;
       projectSubtitles[i].innerHTML = newSubtitle;
-      const newImage = data[randomPosition].image_url;
+      const newImage = data[newOrderProjects+i].image_url;
       projectImages[i].src = newImage;
-      projectLinks[i].href = `/project-single.html?positionBeer=${randomPosition}`;
+      projectLinks[i].href = `/project-single.html?positionBeer=${newOrderProjects+i}`;
+      console.log(newOrderProjects+i)
     }
   }
   catch (error) {
