@@ -8,7 +8,6 @@ const formContact = document.getElementById("form-container");
 const urlContactForm ="https://jsonplaceholder.typicode.com/posts";
 
 
-
 formContact.addEventListener("submit", (e) => {
     e.preventDefault();
     if (fmessage.value.length<5 || fmessage.value.length>200) {

@@ -1,7 +1,6 @@
 /*
 Cargar contenido de sección proyectos: son 3
 */
-
 async function changeContent() {
   try {
     const response= await fetch("https://api.punkapi.com/v2/beers");

@@ -2,7 +2,6 @@
 Cargar contenidos: son 6... ya vendrá del index.js
 */
 
-
 /*
 Botón cargar extra-contenidos: otros 6 (no toca los anteriores pero pueden repetirse y además la 2º vez sí los cambia)
 */
@@ -61,6 +60,7 @@ async function newchangeContent() {
       projectSubtitles[i].innerHTML = newSubtitle;
       const newImage = data[randomPosition].image_url;
       projectImages[i].src = newImage;
+      projectLinks[i].href = `/project-single.html?positionBeer=${randomPosition}`;
     }
   }
   catch (error) {

@@ -1,6 +1,7 @@
 /*
 Menú hamburguesa
 */
+
 const burgerMenu = document.querySelector(".burger-menu");
 const navMenu = document.querySelector(".nav-menu");
 const burgerSpan = document.querySelectorAll(".burger-span");
